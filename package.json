@@ -1,19 +1,11 @@
 {
-  "name": "@google/react-native-make-payment",
-  "version": "0.1.1",
+  "name": "@exodus/react-native-make-payment",
+  "version": "1.0.0",
   "description": "test",
-  "main": "lib/commonjs/index",
-  "module": "lib/module/index",
-  "types": "lib/typescript/index.d.ts",
-  "react-native": "src/index",
-  "source": "src/index",
+  "main": "src/index.jsx",
   "files": [
     "src",
-    "lib",
     "android",
-    "ios",
-    "cpp",
-    "*.podspec",
     "!lib/typescript/example",
     "!ios/build",
     "!android/build",
@@ -28,10 +20,7 @@
   ],
   "scripts": {
     "test": "jest",
-    "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepack": "bob build",
-    "release": "release-it",
     "example": "yarn --cwd example",
     "bootstrap": "yarn example && yarn install && yarn example pods",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build"
@@ -52,11 +41,12 @@
   "author": "Stephen McDonald <stephenmcd@google.com> (https://github.com/google-pay)",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/google-pay/react-native-make-payment/issues"
+    "url": "https://github.com/ExodusMovement/react-native-make-payment/issues"
   },
-  "homepage": "https://github.com/google-pay/react-native-make-payment#readme",
+  "homepage": "https://github.com/ExodusMovement/react-native-make-payment#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "restricted"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.2",
@@ -149,14 +139,6 @@
     "tabWidth": 2,
     "trailingComma": "es5",
     "useTabs": false
-  },
-  "react-native-builder-bob": {
-    "source": "src",
-    "output": "lib",
-    "targets": [
-      "commonjs",
-      "module"
-    ]
   },
   "dependencies": {
     "@babel/runtime": "^7.20.13",

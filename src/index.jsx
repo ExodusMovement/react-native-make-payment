@@ -21,7 +21,7 @@ const MakePayment = NativeModules.MakePayment;
 const GOOGLE_PAY_PMI = 'google_pay';
 
 export class PaymentRequest {
-  #name = '@google/react-native-make-payment';
+  #name = '@exodus/react-native-make-payment';
   #version = '0.0.1';
 
   constructor(paymentMethods, paymentDetails) {
